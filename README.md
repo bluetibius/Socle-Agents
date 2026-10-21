@@ -83,3 +83,7 @@ version unique (`VERSION`), et **généricité** — aucun chemin personnel,
 aucune IP privée, aucun domaine réel. Les termes propres à une installation se
 listent hors du dépôt, dans `$SOCLE_TERMES_INTERDITS` ou
 `~/.config/socle-agents/termes-interdits.txt`.
+
+## Licence
+
+MIT — voir [LICENSE](LICENSE).

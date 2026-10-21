@@ -1,5 +1,14 @@
 # Historique
 
+## 0.2.1 — 21/10/2026
+
+Développée sous 0.2.1-dev.20261021194728 (ouverture 21/10/2026 19:47 CEST).
+
+### Corrections
+
+- Ajoute le fichier `LICENSE` (MIT), que `plugin.json` déclarait déjà sans
+  que le texte de la licence soit fourni.
+
 ## 0.2.0 — 21/10/2026
 
 Développée sous 0.2.0-dev.20261021193324 (ouverture 21/10/2026 19:33 CEST).

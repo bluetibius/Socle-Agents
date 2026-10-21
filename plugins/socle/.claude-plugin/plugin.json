@@ -1,6 +1,6 @@
 {
   "name": "socle",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Socle d'agents générique : principes de travail, Git parallèle, gates, versionnement, production gardée, secrets, autonomie produit, instructions de dépôt, missions multi-agents, mémoire et roadmap, données et migrations, exploitation, tests hermétiques, doctrine UX — et les agents spécialisés qui les appliquent.",
   "license": "MIT"
 }

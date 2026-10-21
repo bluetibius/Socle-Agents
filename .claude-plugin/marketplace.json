@@ -1,13 +1,13 @@
 {
   "name": "socle-agents",
   "owner": { "name": "Socle Agents" },
-  "metadata": { "description": "Socle d'agents générique, indépendant de toute installation.", "version": "0.2.0" },
+  "metadata": { "description": "Socle d'agents générique, indépendant de toute installation.", "version": "0.2.1" },
   "plugins": [
     {
       "name": "socle",
       "source": "./plugins/socle",
       "description": "Principes de travail, skills et agents spécialisés génériques.",
-      "version": "0.2.0"
+      "version": "0.2.1"
     }
   ]
 }
