@@ -1,5 +1,28 @@
 # Historique
 
+## 0.3.0 — 21/10/2026
+
+Développée sous 0.3.0-dev.20261021200601 (ouverture 21/10/2026 20:06 CEST).
+
+### Nouveautés
+
+- Skill `aiguillage` : la session principale décide quels rôles sont utiles
+  pour un travail (signaux mesurés, proportion, étapes toujours obligatoires,
+  parcours types, escalade, rôles écartés justifiés).
+- Skill `livrables` : chaîne des livrables entre rôles et sept gabarits
+  (fiche besoin, ADR, maquette d'écran, plan de migration, plan technique,
+  plan de qualification, rapport d'incident).
+- Dix agents : `aiguilleur`, `analyste-metier`, `architecte`,
+  `analyste-technique`, `concepteur-ux`, `gestionnaire-donnees`,
+  `developpeur`, `testeur`, `devops`, `diagnostic-incident`.
+- `mission-multi-agents` : aiguillage préalable et correspondance phase → rôles.
+- README : agents présentés par phase.
+
+### Opérations
+
+- Mettre à jour le plugin installé (`/plugin marketplace update socle-agents`).
+  Aucun nom existant ne change : aucune rupture.
+
 ## 0.2.1 — 21/10/2026
 
 Développée sous 0.2.1-dev.20261021194728 (ouverture 21/10/2026 19:47 CEST).

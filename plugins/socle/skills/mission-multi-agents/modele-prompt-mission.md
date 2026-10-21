@@ -6,7 +6,9 @@ Interdits propres : production <aucune | liste> ; hors périmètre : <ID — int
 Baseline attendue (à remesurer) : <produit version @ commit, test / production>.
 Gestes humains déclarés : <geste> → <ce qu'il faut mesurer>.
 
-Lane A — <titre> (possède : <dépôts>)
+Aiguillage : rôles retenus <…> ; écartés <rôle — raison>.
+
+Lane A — <titre> (rôle : <agent>, possède : <dépôts>)
   A1 <intitulé> : <ce qui doit être vrai à la fin, et sa preuve>.
   Terminé quand : <critères observables>. Entrées : <ID — intitulé>.
 Lane R — revue : réfuter <affirmations, par lane>.

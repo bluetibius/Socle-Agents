@@ -9,6 +9,24 @@ Un prompt de mission dit « Applique le gabarit de mission » et ne porte que le
 **delta** : objectifs, baseline attendue, lanes, interdits propres, priorités
 de repli. Modèle : [modele-prompt-mission.md](modele-prompt-mission.md).
 
+## 0. Aiguiller d'abord
+
+Avant de composer les lanes, la session applique `aiguillage` : quels rôles
+sont utiles, lesquels sont écartés et pourquoi. Une mission n'emploie pas tous
+les rôles par principe.
+
+| Phase | Rôles (agents du socle) |
+|---|---|
+| Besoin | `analyste-metier`, puis décision du propriétaire |
+| Conception | `architecte`, `concepteur-ux`, `gestionnaire-donnees` |
+| Plan | `analyste-technique`, `testeur` (plan de qualification) |
+| Réalisation | `developpeur` (une instance par lane), `devops`, `gestionnaire-donnees`, `testeur` |
+| Vérification | `gate-runner`, `revue-securite`, `conformite-design-system`, `auditeur-autonomie`, `reviewer-refutation` |
+| Livraison | `release`, `preparateur-prod` |
+| Exploitation, clôture | `diagnostic-incident`, `gardien-memoire` |
+
+Les livrables qui passent d'une phase à l'autre suivent la skill `livrables`.
+
 ## 1. À lire avant d'agir
 
 L'orchestrateur **et chaque** sous-agent lisent : ce gabarit, les règles

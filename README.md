@@ -37,21 +37,37 @@ déclare comme écart, avec sa condition de retrait.
 | `exploitation-sure` | une tâche une horloge, verrous, gestes réels, mesure après déploiement |
 | `tests-hermetiques` | suites isolées, fixtures anonymisées, garde-fous, tests structurels |
 | `doctrine-ux` | principes, espaces, navigation, états, formulaires, anti-patterns |
+| `aiguillage` | quels rôles lancer ou écarter selon le travail ; proportion, escalade |
+| `livrables` | fiche besoin, ADR, maquette, plans, qualification, incident : gabarits et passation |
 
 ### Agents (`plugins/socle/agents/`)
 
-| Agent | Rôle | Écrit ? |
-|---|---|---|
-| `reviewer-refutation` | tente de réfuter un résultat déclaré | non |
-| `auditeur-autonomie` | audit d'autonomie, verdicts et dettes | non |
-| `gate-runner` | lance la gate, rapporte la preuve | non |
-| `release` | conduit une release décidée, jusqu'au test | oui |
-| `preparateur-prod` | prépare la production, ne la déclenche pas | non |
-| `gardien-memoire` | clôture documentaire mémoire/roadmap | oui |
-| `redacteur-instructions` | écrit ou contrôle un `AGENTS.md` | oui |
-| `conformite-design-system` | contrôle une interface contre son DS et `doctrine-ux` | non |
-| `revue-securite` | revue ciblée d'un changement : portes, secrets, SSRF, données | non |
-| `contenu-promotionnel` | slides et légendes exactes à partir du livré ; ne publie pas | oui |
+La session principale orchestre ; la skill `aiguillage` (ou l'agent
+`aiguilleur`) dit quels rôles sont utiles pour un travail donné. Un bug
+localisé n'a pas besoin d'architecte.
+
+| Phase | Agent | Livrable ou rôle | Écrit ? |
+|---|---|---|---|
+| Aiguillage | `aiguilleur` | plan d'intervention : rôles retenus et écartés | non |
+| Besoin | `analyste-metier` | fiche besoin, critères, dix questions | documentation |
+| Conception | `architecte` | décision d'architecture (ADR) | documentation |
+| Conception | `concepteur-ux` | maquette d'écran | documentation |
+| Conception | `gestionnaire-donnees` | plan de migration, migrations | code de schéma |
+| Plan | `analyste-technique` | plan technique, lanes | documentation |
+| Plan / réalisation | `testeur` | plan de qualification, tests | tests |
+| Réalisation | `developpeur` | une lane jusqu'à la gate | code |
+| Réalisation | `devops` | outillage de livraison et d'exploitation | outillage |
+| Vérification | `gate-runner` | gate et preuve | non |
+| Vérification | `revue-securite` | revue ciblée d'un changement | non |
+| Vérification | `conformite-design-system` | interface contre DS et `doctrine-ux` | non |
+| Vérification | `auditeur-autonomie` | verdicts d'autonomie et dettes | non |
+| Vérification | `reviewer-refutation` | tente de réfuter un résultat déclaré | non |
+| Livraison | `release` | release décidée, jusqu'au test | oui |
+| Livraison | `preparateur-prod` | prépare la production, ne la déclenche pas | non |
+| Exploitation | `diagnostic-incident` | rapport d'incident, lecture seule | rapport |
+| Clôture | `gardien-memoire` | mémoire et roadmap | oui |
+| Transverse | `redacteur-instructions` | écrit ou contrôle un `AGENTS.md` | oui |
+| Transverse | `contenu-promotionnel` | contenu exact à partir du livré | fichiers |
 
 ## Installer
 
