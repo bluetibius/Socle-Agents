@@ -33,6 +33,10 @@ déclare comme écart, avec sa condition de retrait.
 | `instructions-depot` | écrire un `AGENTS.md` |
 | `mission-multi-agents` | lanes, revue par réfutation, rapport final |
 | `memoire-roadmap` | mémoire produit partagée, clôture documentaire |
+| `donnees-et-migrations` | bases de test, migrations, simulation, restauration, absence ≠ zéro |
+| `exploitation-sure` | une tâche une horloge, verrous, gestes réels, mesure après déploiement |
+| `tests-hermetiques` | suites isolées, fixtures anonymisées, garde-fous, tests structurels |
+| `doctrine-ux` | principes, espaces, navigation, états, formulaires, anti-patterns |
 
 ### Agents (`plugins/socle/agents/`)
 
@@ -45,7 +49,9 @@ déclare comme écart, avec sa condition de retrait.
 | `preparateur-prod` | prépare la production, ne la déclenche pas | non |
 | `gardien-memoire` | clôture documentaire mémoire/roadmap | oui |
 | `redacteur-instructions` | écrit ou contrôle un `AGENTS.md` | oui |
-| `conformite-design-system` | contrôle une interface contre son DS | non |
+| `conformite-design-system` | contrôle une interface contre son DS et `doctrine-ux` | non |
+| `revue-securite` | revue ciblée d'un changement : portes, secrets, SSRF, données | non |
+| `contenu-promotionnel` | slides et légendes exactes à partir du livré ; ne publie pas | oui |
 
 ## Installer
 

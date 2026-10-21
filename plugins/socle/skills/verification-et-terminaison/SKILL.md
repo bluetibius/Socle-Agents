@@ -47,6 +47,25 @@ Chaque gate citée porte :
 - le chemin du journal ;
 - le résultat et le nombre de tests.
 
+## Travail long
+
+- Quand une étape ne demande pas l'humain, continuer ; donner l'état dans le
+  même message que l'action suivante.
+- S'arrêter et demander seulement quand on ne peut pas continuer sans lui, ou
+  avant un geste destructeur ou irréversible.
+
+## Rapport de fin
+
+Tout travail long se termine par trois rubriques, dans cet ordre :
+
+1. **Blocked on me** — ce qu'aucun agent ne peut faire : décision, geste
+   humain, accès manquant. « Rien » si rien.
+2. **Changed** — ce qui a changé : fichiers, commits, versions,
+   environnements ; ce qui n'a **pas** été fait ou vérifié.
+3. **Found** — ce qui a été appris : constats, risques, écarts, preuves.
+
+Un échec se rapporte avec sa sortie ; une étape sautée se dit.
+
 ## Interface
 
 Vérifier avec les outils réellement disponibles dans la session (navigateur

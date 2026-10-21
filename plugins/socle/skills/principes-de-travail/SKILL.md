@@ -93,4 +93,6 @@ agent : il remonte au propriétaire.
 
 `git-travail-parallele`, `verification-et-terminaison`, `versionnement-release`,
 `production-gardee`, `secrets-securite`, `autonomie-produit`,
-`instructions-depot`, `mission-multi-agents`, `memoire-roadmap`.
+`instructions-depot`, `mission-multi-agents`, `memoire-roadmap`,
+`donnees-et-migrations`, `exploitation-sure`, `tests-hermetiques`,
+`doctrine-ux`.

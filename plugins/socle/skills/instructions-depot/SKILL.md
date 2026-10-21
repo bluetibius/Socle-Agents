@@ -38,6 +38,38 @@ Court et actionnable, dans cet ordre (modèle : [modele-AGENTS.md](modele-AGENTS
 - Une exigence d'outil que tous les agents n'ont pas (un serveur MCP
   particulier, par exemple).
 
+## Ce qu'un AGENTS.md doit rendre visible
+
+Ces situations se perdent si elles ne sont pas écrites :
+
+- **Code dupliqué exprès** : les paires de fichiers « à modifier des deux
+  côtés » (validateur client ↔ serveur, clé calculée dans deux langages), avec
+  le contrat qui les relie.
+- **Copies et sources** : les fichiers vendorisés ou synchronisés, l'outil qui
+  les met à jour (depuis un tag publié) ; ils ne se modifient jamais à la main.
+- **Une seule liste** : quand une liste fait autorité (exclusions, routes
+  mesurées, tâches), dire où elle est ; on ne la recopie pas.
+- **Contrats publics** : codes de sortie, formats, endpoints dont d'autres
+  dépendent ; leur sens ne change pas sans version.
+- **Consommateurs** : qui reprend ce paquet ou ce contrat. Un changement de
+  comportement se signale à chacun ; la reprise est un geste de leur propre
+  chantier.
+- **Héritages conservés** : anciens identifiants qu'on ne renomme pas
+  « en passant » (nom d'application, cookie, base, script appelé par un
+  outil) ; la prose emploie le terme actuel.
+- **Documents historiques** : quels fichiers à la racine sont historiques, et
+  lesquels font foi.
+- **Données irremplaçables** et commandes destructrices
+  (`donnees-et-migrations`).
+
+## Documentation à tenir après un ajout majeur
+
+Le dépôt dit ce qu'un **ajout majeur** (nouvelle page, nouveau module ou
+fonctionnalité visible, nouvelle logique métier, refonte visuelle d'une
+section) impose de mettre à jour — README, liste des fonctionnalités,
+nouveautés affichées aux utilisateurs (et leurs langues) — et ce qui ne compte
+pas (correction, ajustement CSS, refactorisation sans effet visible).
+
 ## Contrôle
 
 Si l'organisation a un contrôleur d'instructions, le lancer après chaque

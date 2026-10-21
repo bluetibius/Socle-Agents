@@ -49,6 +49,21 @@ distincte.
 Un tag publié est **immuable** : un échec se reprend avec ce code ou par une
 nouvelle version. Une publication Git ne prouve jamais une livraison.
 
+## Plusieurs numéros
+
+Un composant peut porter plusieurs numéros indépendants (application,
+contrat d'API, format de données, connecteur, schéma). Chacun est déclaré une
+fois, avec ses tags propres (`api-vX.Y.Z`…) ; un consommateur refuse ce qu'il
+ne sait pas lire et le dit. Un numéro de build monotone (plateforme native)
+reste distinct du numéro produit.
+
+## Cohérence contrôlée
+
+- La version déclarée n'est jamais en retard sur le dernier tag.
+- Les mentions de version (README, historique, endpoint de version) suivent la
+  source unique ; un test le vérifie.
+- Une copie vendorisée correspond à un commit publié, jamais à un état local.
+
 ## Notes de version
 
 Une note par tag, qui correspond exactement à sa version. Pas de second
