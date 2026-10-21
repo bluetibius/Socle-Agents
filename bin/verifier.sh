@@ -32,6 +32,17 @@ for f in plugins/*/agents/*.md; do
 done
 ok "agents : $(ls plugins/*/agents/*.md | wc -l | tr -d ' ') contrôlés"
 
+# 2b. Agents de lecture : pas d'Edit ; un shell n'est permis qu'avec la règle
+#     « Shell en lecture seule » de principes-de-travail citée dans le corps.
+for f in plugins/*/agents/*.md; do
+  d=$(champ "$f" description); t=$(champ "$f" tools)
+  case "$d" in *"lecture seule"*|*"Ne corrige rien"*|*"ne la déclenche pas"*|*"Ne réalise rien"*)
+    case ", $t," in *", Edit,"*) ko "$f : agent de lecture avec Edit" ;; esac
+    case ", $t," in *", Bash,"*) grep -q "Shell en lecture seule" "$f" || ko "$f : shell sans la règle de lecture seule" ;; esac ;;
+  esac
+done
+ok "agents de lecture"
+
 # 3. Liens relatifs des fichiers Markdown du socle.
 for f in $(find plugins -name '*.md'); do
   for cible in $(grep -oE '\]\([^)#:]+\)' "$f" | sed 's/^](//; s/)$//'); do

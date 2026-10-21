@@ -1,7 +1,7 @@
 ---
 name: auditeur-autonomie
 description: Audit d'autonomie fonctionnelle et opérationnelle d'un produit ou d'une fonctionnalité — repère les données métier codées en dur, les tâches récurrentes manuelles, les corrections qui exigent un commit ou du SQL, les imports non idempotents. À utiliser pour qualifier une fonctionnalité avant de la déclarer terminée, ou pour auditer un produit existant.
-tools: Read, Grep, Glob, Bash
+tools: Read, Grep, Glob
 skills: autonomie-produit, principes-de-travail
 ---
 

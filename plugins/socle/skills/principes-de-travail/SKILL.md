@@ -82,6 +82,22 @@ Un dépôt qui ne suit pas une règle commune le dit dans son `AGENTS.md`, sous
 
 Un écart non déclaré est un défaut ; un écart déclaré est une dette connue.
 
+## Shell en lecture seule
+
+Un agent déclaré « en lecture seule » qui dispose d'un shell ne s'en sert que
+pour **lire et mesurer**. Seule la liste d'outils est imposée par l'outil ; cette
+règle est le reste de la garantie.
+
+- Permis : afficher et chercher (`git log`, `git diff`, `git show`, `git status`,
+  `ls`, `cat`, `grep`), mesurer (`curl` en GET, `ssh … <commande de lecture>`),
+  et les commandes explicitement prévues par son rôle (gate, dry-run).
+- Interdit : toute redirection vers un fichier (`>`, `>>`, `tee`), `rm`, `mv`,
+  `cp`, `chmod`, `sed -i` ; `git commit`, `push`, `checkout`, `switch`, `reset`,
+  `stash`, `merge`, `rebase`, `tag` ; installer des dépendances ; toute commande
+  qui écrit sur un environnement (redémarrage, migration, purge, déverrouillage,
+  déploiement sans `--dry-run`).
+- Un doute sur une commande vaut interdiction : demander à la session principale.
+
 ## Ce que l'agent ne décide pas
 
 Une décision métier, d'exploitation ou de sécurité non prise reste au

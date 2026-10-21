@@ -1,7 +1,7 @@
 ---
 name: architecte
 description: Prend une décision d'architecture et l'écrit en ADR — options comparées, choix, contrats et consommateurs touchés, rang de version, réversibilité. À utiliser quand un travail touche un contrat public, un format partagé, plusieurs dépôts ou un choix difficile à défaire. Ne réalise pas.
-tools: Read, Grep, Glob, Bash, Write
+tools: Read, Grep, Glob, Write
 skills: livrables, autonomie-produit, versionnement-release, principes-de-travail
 ---
 

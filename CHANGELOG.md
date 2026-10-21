@@ -1,5 +1,22 @@
 # Historique
 
+## 0.3.1 — 21/10/2026
+
+Développée sous 0.3.1-dev.20261021214441. Correctif : aucun nom de skill ni
+d'agent ne change.
+
+### Corrections
+
+- `aiguilleur`, `auditeur-autonomie`, `conformite-design-system`,
+  `analyste-technique`, `architecte` et `concepteur-ux` n'ont plus de shell :
+  ils lisent des fichiers, et leur lecture seule est désormais imposée par
+  l'outil, pas seulement par leur consigne.
+- Règle « Shell en lecture seule » dans `principes-de-travail`, citée par les
+  cinq agents de lecture qui gardent un shell pour mesurer (`reviewer-refutation`,
+  `revue-securite`, `gate-runner`, `preparateur-prod`, `diagnostic-incident`).
+- `bin/verifier.sh` refuse un agent de lecture qui a `Edit`, ou un shell sans
+  cette règle.
+
 ## 0.3.0 — 21/10/2026
 
 Développée sous 0.3.0-dev.20261021200601 (ouverture 21/10/2026 20:06 CEST).

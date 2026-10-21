@@ -46,6 +46,10 @@ La session principale orchestre ; la skill `aiguillage` (ou l'agent
 `aiguilleur`) dit quels rôles sont utiles pour un travail donné. Un bug
 localisé n'a pas besoin d'architecte.
 
+Une colonne « non » est garantie par la liste d'outils, sauf pour les agents qui
+gardent un shell pour mesurer : leur lecture seule repose sur la règle « Shell en
+lecture seule » de `principes-de-travail`.
+
 | Phase | Agent | Livrable ou rôle | Écrit ? |
 |---|---|---|---|
 | Aiguillage | `aiguilleur` | plan d'intervention : rôles retenus et écartés | non |

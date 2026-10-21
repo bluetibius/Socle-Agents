@@ -1,7 +1,7 @@
 ---
 name: analyste-technique
 description: Produit le plan technique d'un changement dans un dépôt — étapes ordonnées par fichier, tests associés, pièges du dépôt, copies et code dupliqué à respecter, rang de version, découpage en lanes. À utiliser quand un changement touche plus de quelques fichiers ou que l'ordre n'est pas évident. Lecture seule sur le code.
-tools: Read, Grep, Glob, Bash, Write
+tools: Read, Grep, Glob, Write
 skills: livrables, git-travail-parallele, tests-hermetiques, versionnement-release
 ---
 

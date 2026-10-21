@@ -1,7 +1,7 @@
 ---
 name: concepteur-ux
 description: Conçoit un écran avant sa réalisation — espace, hiérarchie, action principale, structure en composants du design system, états, formulaire, textes exacts, comportement sur téléphone. À utiliser pour un écran nouveau ou une modification visible. Produit une maquette écrite ; ne code pas l'interface.
-tools: Read, Grep, Glob, Bash, Write
+tools: Read, Grep, Glob, Write
 skills: doctrine-ux, livrables, principes-de-travail
 ---
 

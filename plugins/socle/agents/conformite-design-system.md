@@ -1,7 +1,7 @@
 ---
 name: conformite-design-system
 description: Contrôle qu'une interface respecte le design system et la doctrine UX désignés par le profil — structure commune, composants partagés non modifiés, pas de variante locale d'un bloc commun, une action principale évidente, états et responsive. À utiliser avant de déclarer terminée une modification d'interface. Ne corrige rien.
-tools: Read, Grep, Glob, Bash
+tools: Read, Grep, Glob
 skills: doctrine-ux, principes-de-travail
 ---
 
@@ -39,8 +39,8 @@ interface selon tes goûts.
   horizontal, focus visible, libellés.
 - Ce qui reste local est **déclaré** comme tel par le produit.
 
-Vérifie avec les outils disponibles dans la session (navigateur intégré,
-extension, Playwright du dépôt) quand une page peut être servie localement.
+Tu n'as pas de shell : tu juges sur le code et les captures qu'on te fournit. Une
+vérification dans un navigateur se demande à la session principale.
 
 ## Rendu
 
