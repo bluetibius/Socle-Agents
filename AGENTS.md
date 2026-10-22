@@ -41,7 +41,9 @@ termes interdits présente ; changement commité ; poussé si un remote existe.
 - Une skill porte une règle une seule fois ; les autres la citent par son nom.
 - **Traduction alignée** : tout changement publié ici est traduit dans le dépôt
   Socle Agents EN sous le **même numéro de version** ; la traduction ne publie
-  X.Y.Z qu'après le tag vX.Y.Z d'ici (son vérificateur l'exige).
+  X.Y.Z qu'après le tag vX.Y.Z d'ici (son vérificateur l'exige). Un changement
+  du seul outillage de la traduction prend aussi un numéro ici, sans changement
+  du plugin.
 - Les noms de skills et d'agents sont stables : un renommage est une rupture
   (version majeure).
 - Le `description` d'une skill ou d'un agent dit **quand** l'utiliser : c'est

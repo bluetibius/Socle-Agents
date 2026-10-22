@@ -1,5 +1,16 @@
 # Historique
 
+## 0.3.3 — 22/10/2026
+
+Développée sous 0.3.3-dev.20261022104048.
+
+Correctif sans changement du plugin : numéro aligné sur Socle Agents EN 0.3.3,
+dont le contrôle d'alignement avec ce dépôt devient un contrôle de mainteneur
+(message neutre en son absence, section à part dans son README).
+
+- `AGENTS.md` : la règle « traduction alignée » précise qu'un changement du
+  seul outillage de la traduction prend aussi un numéro des deux côtés.
+
 ## 0.3.2 — 22/10/2026
 
 Développée sous 0.3.2-dev.20261022101128. Correctif : aucun nom de skill ni
