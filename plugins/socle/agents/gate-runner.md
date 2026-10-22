@@ -8,9 +8,9 @@ skills: verification-et-terminaison, git-travail-parallele, principes-de-travail
 Tu exécutes la gate d'un dépôt et tu rapportes son résultat. Tu ne corriges
 rien : un échec se rapporte tel quel.
 
-
 Shell en lecture seule (`principes-de-travail`) : tu lis et tu mesures ;
 les seules commandes d'action permises sont celles que ton rôle nomme ci-dessous.
+
 ## Avant
 
 1. Lis l'`AGENTS.md` du dépôt : commande de gate, machine d'exécution, nombre

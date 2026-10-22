@@ -69,15 +69,33 @@ ok "manifestes et version $version"
 #    installation donnée se listent HORS du dépôt (sinon la liste les
 #    publierait) : $SOCLE_TERMES_INTERDITS, ou
 #    ~/.config/socle-agents/termes-interdits.txt (un motif par ligne).
-cherche() { grep -rnIE "$1" --exclude-dir=.git --exclude=.git . || true; }
+# L'auteur se nomme, avec son adresse, dans les seuls fichiers d'auteur :
+# manifestes, LICENSE et README. Source unique : plugins/socle/.claude-plugin/plugin.json.
+auteur=$(python3 -I -c 'import json,sys; print(json.load(open(sys.argv[1]))["author"]["name"])' plugins/socle/.claude-plugin/plugin.json 2>/dev/null)
+courriel=$(python3 -I -c 'import json,sys; print(json.load(open(sys.argv[1]))["author"].get("email",""))' plugins/socle/.claude-plugin/plugin.json 2>/dev/null)
+[ -n "$auteur" ] || ko "plugins/socle/.claude-plugin/plugin.json : auteur absent"
+for j in .claude-plugin/marketplace.json plugins/*/.claude-plugin/plugin.json; do
+  grep -qF "\"name\": \"$auteur\"" "$j" || ko "$j : auteur différent de « $auteur »"
+done
+grep -qF "Copyright (c) 2026 $auteur" LICENSE || ko "LICENSE : titulaire différent de « $auteur »"
+ok "auteur : $auteur"
+sauf_auteur() { # retire les lignes des fichiers d'auteur qui ne portent que l'auteur
+  awk -v a="$auteur" -v c="$courriel" 'BEGIN { FS = ":" }
+    { f = $1; sub(/^\.\//, "", f) }
+    (f == "LICENSE" || f == "README.md" || f ~ /(^|\/)\.claude-plugin\/(plugin|marketplace)\.json$/) && ((a != "" && index($0, a)) || (c != "" && index($0, c))) { next }
+    { print }'
+}
+cherche() { grep -rnIE "$1" --exclude-dir=.git --exclude=.git . | sauf_auteur || true; }
 signale() { if [ -n "$2" ]; then ko "$1 :"; echo "$2" | sed 's/^/       /'; else ok "aucun(e) $1"; fi; }
 signale "chemin personnel" "$(cherche '(/Users/|/home/)[A-Za-z0-9._-]+')"
 signale "adresse IP privée" "$(cherche '\b(10\.[0-9]+|192\.168|172\.(1[6-9]|2[0-9]|3[01]))\.[0-9]+\.[0-9]+\b')"
-signale "domaine réel" "$(cherche '\b[a-z0-9-]+\.(be|fr|com|net|org|io|dev|test|local)\b' | grep -vE '(example\.(com|org|net)|\b(AGENTS|CLAUDE|GEMINI|SKILL)\.md|json\.load)' || true)"
+# Les exceptions portent sur le CONTENU de la ligne, jamais sur son chemin :
+# sinon toute ligne d'un SKILL.md ou d'un AGENTS.md échapperait au contrôle.
+signale "domaine réel" "$(cherche '\b[a-z0-9-]+\.(be|fr|com|net|org|io|dev|test|local)\b' | awk '{ c = $0; sub(/^[^:]*:[0-9]+:/, "", c) } c !~ /(example\.(com|org|net)|(AGENTS|CLAUDE|GEMINI|SKILL)\.md|json\.load)/ { print }')"
 termes=${SOCLE_TERMES_INTERDITS:-$HOME/.config/socle-agents/termes-interdits.txt}
 if [ -f "$termes" ]; then
   motif=$(grep -vE '^(#|$)' "$termes" | paste -sd'|' -)
-  [ -n "$motif" ] && signale "terme propre à une installation" "$(grep -rniIE "$motif" --exclude-dir=.git --exclude=.git . || true)"
+  [ -n "$motif" ] && signale "terme propre à une installation" "$(grep -rniIE "$motif" --exclude-dir=.git --exclude=.git . | sauf_auteur || true)"
 else
   echo "--   liste locale de termes interdits absente ($termes) : contrôle partiel"
 fi

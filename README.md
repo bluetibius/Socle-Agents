@@ -1,5 +1,7 @@
 # Socle Agents
 
+*English version: repository Socle Agents EN (plugin `socle-en`), versions aligned.*
+
 Un socle de règles, de skills et d'agents spécialisés pour les agents de code
 (Claude Code, Codex, et tout outil qui lit `AGENTS.md` ou le format `SKILL.md`).
 Il ne nomme aucune installation : chaque utilisateur le relie à la sienne par un
@@ -83,7 +85,9 @@ Claude Code, depuis un clone local ou un remote Git :
 ```
 
 Les skills deviennent `socle:<skill>` et les agents sont proposés à la
-délégation. Pour un autre outil, pointer ses instructions vers les fichiers
+délégation. La traduction anglaise complète, aux mêmes règles, vit dans le dépôt
+Socle Agents EN (marketplace `socle-agents-en`, plugin `socle-en`) : n'installer
+qu'une langue. Pour un autre outil, pointer ses instructions vers les fichiers
 `SKILL.md` (format ouvert), par exemple depuis l'`AGENTS.md` d'un dépôt.
 
 ## Relier à une installation
@@ -104,6 +108,6 @@ aucune IP privée, aucun domaine réel. Les termes propres à une installation s
 listent hors du dépôt, dans `$SOCLE_TERMES_INTERDITS` ou
 `~/.config/socle-agents/termes-interdits.txt`.
 
-## Licence
+## Auteur et licence
 
-MIT — voir [LICENSE](LICENSE).
+Auteur : Jonathan Estevez. Licence MIT — voir [LICENSE](LICENSE).

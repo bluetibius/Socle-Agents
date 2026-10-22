@@ -2,7 +2,8 @@
 
 Socle générique de règles, skills et agents pour agents de code, publié comme
 marketplace de plugins Claude Code (`.claude-plugin/marketplace.json`, plugin
-`plugins/socle`). Markdown et JSON seulement ; aucun code exécuté hors du
+`plugins/socle`). C'est la référence ; sa traduction anglaise vit dans le dépôt
+voisin Socle Agents EN. Markdown et JSON seulement ; aucun code exécuté hors du
 contrôle `bin/verifier.sh`.
 
 Règles communes : le socle s'applique à lui-même
@@ -38,6 +39,9 @@ termes interdits présente ; changement commité ; poussé si un remote existe.
 - Une règle entre au socle seulement si elle vaut pour n'importe quel dépôt ;
   sinon elle appartient à un profil ou à un `AGENTS.md`.
 - Une skill porte une règle une seule fois ; les autres la citent par son nom.
+- **Traduction alignée** : tout changement publié ici est traduit dans le dépôt
+  Socle Agents EN sous le **même numéro de version** ; la traduction ne publie
+  X.Y.Z qu'après le tag vX.Y.Z d'ici (son vérificateur l'exige).
 - Les noms de skills et d'agents sont stables : un renommage est une rupture
   (version majeure).
 - Le `description` d'une skill ou d'un agent dit **quand** l'utiliser : c'est

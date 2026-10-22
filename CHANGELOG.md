@@ -1,5 +1,27 @@
 # Historique
 
+## 0.3.2 — 22/10/2026
+
+Développée sous 0.3.2-dev.20261022101128. Correctif : aucun nom de skill ni
+d'agent ne change. Traduction anglaise publiée sous le même numéro dans le
+dépôt Socle Agents EN.
+
+Ouverte comme 0.4.0 pour une traduction anglaise intégrée ; la traduction est
+partie dans son propre dépôt, Socle Agents EN, aux versions alignées : le rang
+redescend à correctif.
+
+### Corrections
+
+- Auteur déclaré (source : `plugins/socle/.claude-plugin/plugin.json`, adresse
+  `noreply` de la forge), dans le `plugin.json`, le propriétaire de la
+  marketplace, `LICENSE` et le README. Le vérificateur contrôle que l'auteur est
+  le même partout et ne tolère son nom et son adresse que dans ces fichiers.
+- Contrôle « domaine réel » : ses exceptions s'appliquaient à la ligne entière,
+  chemin compris ; toute ligne d'un `SKILL.md` ou d'un `AGENTS.md` y échappait
+  depuis la 0.1.0. Elles ne portent plus que sur le contenu.
+- Agents français de lecture : ligne vide rétablie après la règle « Shell en
+  lecture seule ».
+
 ## 0.3.1 — 21/10/2026
 
 Développée sous 0.3.1-dev.20261021214441. Correctif : aucun nom de skill ni

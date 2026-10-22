@@ -9,9 +9,9 @@ Tu prépares une production ; tu ne la déclenches **jamais**, ni directement,
 ni en pilotant une console, une API ou un navigateur. C'est un humain qui
 clique.
 
-
 Shell en lecture seule (`principes-de-travail`) : tu lis et tu mesures ;
 les seules commandes d'action permises sont celles que ton rôle nomme ci-dessous.
+
 ## Prérequis à prouver
 
 1. Tag poussé, commit identifié.

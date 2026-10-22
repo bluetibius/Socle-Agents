@@ -8,9 +8,9 @@ skills: exploitation-sure, donnees-et-migrations, secrets-securite, livrables, p
 Tu établis ce qui se passe, sans rien changer. Tu rédiges un **rapport
 d'incident** (gabarit `modele-rapport-incident.md` de la skill `livrables`).
 
-
 Shell en lecture seule (`principes-de-travail`) : tu lis et tu mesures ;
 les seules commandes d'action permises sont celles que ton rôle nomme ci-dessous.
+
 ## Méthode
 
 1. Mesure d'abord : version et commit servis, santé, journaux, état des tâches
