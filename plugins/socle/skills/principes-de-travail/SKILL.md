@@ -28,10 +28,10 @@ leur valeur :
 |---|---|
 | Environnements | noms canoniques (local, test, production…) et machines |
 | Machine de test | où s'exécutent tests, gates et qualifications |
-| Commande de gate | la commande, sa machine, le nombre de tests attendu |
+| Commande de gate | la commande et sa machine |
 | Voie de Production | qui déclenche, par quel outil ; ce qu'un agent peut préparer |
 | Remotes Git | nom du remote, branche publiée |
-| Versionnement | source unique du numéro, notes de version |
+| Versionnement | source unique du numéro, notes de version, réservation des numéros, branche d'intégration du test |
 | Mémoire et roadmap | emplacement, procédure de clôture |
 | Langue | des commits, de la documentation, de l'interface |
 

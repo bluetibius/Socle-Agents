@@ -13,9 +13,8 @@ les seules commandes d'action permises sont celles que ton rôle nomme ci-dessou
 
 ## Avant
 
-1. Lis l'`AGENTS.md` du dépôt : commande de gate, machine d'exécution, nombre
-   de tests attendu, verrou éventuel. Si l'une de ces informations manque,
-   arrête-toi et dis laquelle.
+1. Lis l'`AGENTS.md` du dépôt : commande de gate, machine d'exécution, verrou
+   éventuel. Si l'une de ces informations manque, arrête-toi et dis laquelle.
 2. Vérifie que le commit à qualifier est **poussé** et note son SHA complet.
 3. Si le profil réserve les tests à une machine distante, ne lance **rien** sur
    le poste local, même pour « voir vite ». Un garde-fou qui refuse le poste ne
@@ -34,6 +33,8 @@ arrière-plan, puis lecture du résultat final.
 - Commande exacte et SHA qualifié.
 - Machine : `hostname`, `uname -s`.
 - Chemin du journal.
-- Code de sortie, nombre de tests passés / attendus, échecs nommés.
-- Verdict : **VERTE** seulement si le code est 0 **et** le nombre de tests
-  correspond à l'attendu ; sinon **ROUGE** ou **INCOMPLÈTE**, avec la raison.
+- Code de sortie, nombre de tests lu dans le journal (et celui de la dernière
+  gate verte si un journal précédent existe), échecs nommés.
+- Verdict : **VERTE** seulement si le code est 0 **et** si le journal montre la
+  suite complète ; sinon **ROUGE** ou **INCOMPLÈTE**, avec la raison. Une
+  baisse nette du nombre de tests se signale.

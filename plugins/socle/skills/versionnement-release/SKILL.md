@@ -23,7 +23,8 @@ Les séries existantes ne sont pas renumérotées.
 
 ## Pendant le chantier
 
-1. Lire l'existant, la mémoire et la roadmap ; choisir la cible.
+1. Lire l'existant, la mémoire et la roadmap ; choisir la cible et
+   **réserver** son numéro (skill `git-travail-parallele`).
 2. Une **source unique** du numéro dans le dépôt ; les autres projections sont
    générées ou contrôlées.
 3. Numéro de développement `X.Y.Z-dev.AAAAMMJJHHMMSS`, horodaté à l'ouverture
@@ -42,8 +43,8 @@ distincte.
 2. Pousser le candidat ; gate sur son commit exact.
 3. Fusion en fast-forward sur la branche publiée ; tag annoté `vX.Y.Z` sur ce
    commit ; pousser branche et tag. Divergence : réconcilier puis requalifier.
-4. Livrer en test par le parcours du produit et qualifier (version et commit
-   servis égaux au tag, santé, smoke).
+4. Livrer en test par le parcours du produit, après mesure de ce qui y est
+   servi, et qualifier (version et commit servis égaux au tag, santé, smoke).
 5. Production : selon la skill `production-gardee`.
 
 Un tag publié est **immuable** : un échec se reprend avec ce code ou par une

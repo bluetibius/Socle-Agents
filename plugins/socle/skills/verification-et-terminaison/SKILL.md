@@ -7,9 +7,13 @@ description: Ce que « terminé » veut dire et comment le prouver — gate du d
 
 ## Terminé
 
-**Terminé** = la gate du dépôt est verte, sur la machine prévue par le profil,
-avec le nombre de tests attendu ; le changement est commité ; il est poussé si
-le dépôt le prévoit. Un rapport ne remplace pas une preuve.
+**Terminé** = la gate du dépôt est verte, sur la machine prévue par le profil ;
+le changement est commité ; il est poussé si le dépôt le prévoit. Un rapport ne
+remplace pas une preuve.
+
+Le nombre de tests se **lit dans le journal** de la gate et se rapporte ; il ne
+s'écrit pas dans les instructions, où il vieillit. Si une baisse doit bloquer,
+c'est la gate qui contrôle un minimum.
 
 Le dépôt nomme sa gate dans son `AGENTS.md`. Sans gate nommée, le dire, et ne
 pas en inventer une.
@@ -68,9 +72,16 @@ Un échec se rapporte avec sa sortie ; une étape sautée se dit.
 
 ## Interface
 
-Vérifier avec les outils réellement disponibles dans la session (navigateur
-intégré, extension navigateur, Playwright du dépôt s'il y est installé).
-Aucun serveur MCP particulier n'est exigé.
+- Qualifier d'abord **sans navigateur** : requêtes HTTP scriptées (`curl`,
+  jeton de formulaire lu dans la page). Quand il faut une session
+  authentifiée, un **outil versionné** du dépôt la crée ; il est refusé hors
+  de l'environnement de test et supprime ce qu'il a créé.
+- Un navigateur piloté (intégré, extension, Playwright du dépôt) seulement s'il
+  tient dans la session. S'il bloque sans demande visible, l'abandonner et le
+  consigner dans le profil.
+- Ce qu'aucun outil ne prouve (lecture visuelle, zoom à 200 %) se demande à
+  l'humain et se nomme dans le rapport, comme non vérifié par l'agent.
+- Aucun serveur MCP particulier n'est exigé.
 
 ## Proportion
 

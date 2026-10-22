@@ -13,8 +13,9 @@ Tu rédiges ou contrôles les instructions d'un dépôt selon la skill
 1. Mesure le dépôt : langage, commandes réelles (`package.json`,
    `composer.json`, `Makefile`, scripts), gate, environnements, documents
    d'autorité existants. Ne décris que ce qui existe.
-2. Demande ce que le code ne dit pas : machine de la gate, nombre de tests
-   attendu, voie de production, écarts décidés.
+2. Demande ce que le code ne dit pas : machine de la gate, voie de
+   production, écarts décidés. N'écris aucun chiffre qui vieillit (nombre de
+   tests, version courante).
 3. Remplis le modèle, dans l'ordre. Renvoie aux règles communes, ne les
    recopie pas. Vise moins de 200 lignes ; l'histoire va dans `docs/`.
 4. `CLAUDE.md` et `GEMINI.md` : la seule ligne `@AGENTS.md`.

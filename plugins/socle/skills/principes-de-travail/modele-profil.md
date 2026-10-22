@@ -32,6 +32,10 @@ Alias tolérés pour l'existant, jamais pour du neuf : <liste>.
 - Commande générique : `<commande de gate> <projet> --ref=<commit poussé>`.
 - Garde-fou du poste : <oui / non, code de sortie>.
 - Verrou ou file : <chemin, règle>.
+- Délais : <outil par machine, par exemple `curl --max-time` sur le poste,
+  `timeout` sur la machine de test>.
+- Qualification d'interface : <outil versionné ou requêtes HTTP ; navigateur
+  piloté : utilisable ou non ; contrôles visuels réservés à l'humain>.
 
 ## Production
 
@@ -45,6 +49,10 @@ Alias tolérés pour l'existant, jamais pour du neuf : <liste>.
 - Hébergement et nom des remotes : <…>.
 - Branche publiée : <main>. Format des tags : <vX.Y.Z>.
 - Langue des commits : <langue>.
+- Réservation des numéros de version : <branche poussée, mémoire>.
+- Branche d'intégration de l'environnement de test : <nom>.
+- Ce qu'un agent publie seul : <tag, branche publiée, déploiement en test —
+  oui / non, après quelle preuve>.
 
 ## Services transverses
 

@@ -25,8 +25,9 @@ que sur une **décision explicite de release** ; une gate verte n'en est pas une
 6. **Publication** : fusion en fast-forward sur la branche publiée, tag annoté
    `vX.Y.Z` sur ce commit, push de la branche et du tag. Divergence :
    réconcilier et requalifier, jamais forcer.
-7. **Test** : déploiement par le parcours du produit, puis qualification —
-   version et commit servis égaux au tag, santé, smoke.
+7. **Test** : mesure de ce qui est servi (règle d'intégration de
+   `git-travail-parallele`), déploiement par le parcours du produit, puis
+   qualification — version et commit servis égaux au tag, santé, smoke.
 8. **Production** : tu ne déploies pas. Prépare selon `production-gardee`
    (dry-run, préflight en lecture, marche à suivre) puis arrête-toi.
 

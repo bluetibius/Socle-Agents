@@ -6,7 +6,7 @@ Règles communes : <renvoi au profil d'organisation>, puis le socle d'agents
 (`plugins/socle/skills/principes-de-travail/SKILL.md`). Ce fichier ne porte que
 ce qui est propre à <Produit>.
 
-**Terminé** = <commande de gate> verte sur <machine> (<N> tests), commit
+**Terminé** = <commande de gate> verte sur <machine>, commit
 poussé sur <remote>. Journal : <chemin>.
 
 ## Commandes

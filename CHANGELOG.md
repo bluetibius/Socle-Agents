@@ -1,5 +1,36 @@
 # Historique
 
+## 0.4.0 — 22/10/2026
+
+Développée sous 0.4.0-dev.20261022130747.
+
+Règles tirées du retour d'une release menée par deux outils d'agents sur le
+même produit. Aucun nom de skill ni d'agent ne change.
+
+### Nouveautés
+
+- `git-travail-parallele` : section « Plusieurs agents sur un même produit » —
+  réserver un numéro de version avant le premier commit qui le porte, intégrer
+  par fusion et jamais en réappliquant le travail d'un autre, déployer un
+  environnement partagé depuis une seule branche d'intégration après avoir
+  mesuré ce qui est servi (le commit déployé contient le commit servi).
+- `verification-et-terminaison`, « Interface » : qualifier d'abord sans
+  navigateur (requêtes HTTP, outil versionné du dépôt limité au test) ;
+  navigateur piloté seulement s'il tient dans la session ; contrôles visuels
+  demandés à l'humain et nommés dans le rapport.
+- `exploitation-sure` : mesurer le servi avant un déploiement partagé ; un délai
+  sur toute commande qui attend le réseau, avec l'outil de la machine.
+- Modèle de profil : délais par machine, outil de qualification, réservation
+  des numéros, branche d'intégration du test, ce qu'un agent publie seul.
+
+### Changements
+
+- Le nombre de tests ne s'écrit plus dans les instructions (`AGENTS.md`,
+  profil, modèle) : il se lit dans le journal de la gate. `gate-runner` rend
+  VERTE sur un code 0 et une suite complète, et signale une baisse nette.
+- `release` et `testeur` mesurent ce qui est servi avant de déployer et
+  qualifient d'abord par requêtes HTTP.
+
 ## 0.3.3 — 22/10/2026
 
 Développée sous 0.3.3-dev.20261022104048.

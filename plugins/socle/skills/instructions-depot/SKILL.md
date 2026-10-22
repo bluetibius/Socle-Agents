@@ -21,7 +21,7 @@ Court et actionnable, dans cet ordre (modèle : [modele-AGENTS.md](modele-AGENTS
 1. Ce qu'est le produit, en quelques lignes.
 2. Le renvoi aux règles communes (profil d'organisation, puis ce socle) —
    un renvoi, **pas une copie**.
-3. **Terminé** : la gate, sa machine, le nombre de tests attendu.
+3. **Terminé** : la gate et sa machine.
 4. Commandes.
 5. Structure : où se trouve quoi, quels documents font autorité.
 6. Environnements du produit.
@@ -32,6 +32,8 @@ Court et actionnable, dans cet ordre (modèle : [modele-AGENTS.md](modele-AGENTS
 ## Ce qui n'y va pas
 
 - L'histoire : elle va dans `docs/` ou dans Git.
+- Un chiffre qui change à chaque version (nombre de tests, version courante,
+  taille) : il vieillit sans que rien ne le signale ; il se lit à sa source.
 - Une consigne de chantier ponctuel : elle reste dans ce chantier, et n'entre
   dans `AGENTS.md` que si elle devient une règle permanente du produit.
 - Une copie des règles communes : on cite, on ne recopie pas.

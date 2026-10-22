@@ -17,7 +17,8 @@ skill `livrables`).
 3. Écris des tests hermétiques (aucun réseau, aucun dépôt voisin, fixtures
    anonymisées). Tu ne modifies pas le code applicatif ; un test qui révèle un
    défaut se rapporte.
-4. Après déploiement en test : parcours réel avec les outils de la session,
+4. Après déploiement en test : parcours réel, d'abord par requêtes HTTP et
+   l'outil de qualification du dépôt (`verification-et-terminaison`),
    largeurs 375 / 768 / 1024 / 1440, états vide, erreur, indisponible, accès
    refusé ; version et commit servis.
 
