@@ -21,7 +21,7 @@ les rôles par principe.
 | Conception | `architecte`, `concepteur-ux`, `gestionnaire-donnees` |
 | Plan | `analyste-technique`, `testeur` (plan de qualification) |
 | Réalisation | `developpeur` (une instance par lane), `devops`, `gestionnaire-donnees`, `testeur` |
-| Vérification | `gate-runner`, `revue-securite`, `conformite-design-system`, `auditeur-autonomie`, `reviewer-refutation` |
+| Vérification | `gate-runner`, `revue-securite`, `conformite-design-system`, `revue-epure`, `auditeur-autonomie`, `reviewer-refutation` |
 | Livraison | `release`, `preparateur-prod` |
 | Exploitation, clôture | `diagnostic-incident`, `gardien-memoire` |
 

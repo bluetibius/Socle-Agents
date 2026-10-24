@@ -26,6 +26,7 @@ et rend un plan ; la session l'exécute.
 | capacité nouvelle, besoin flou, plusieurs publics touchés | `analyste-metier` (puis décision du propriétaire) |
 | contrat public, API, format partagé, plusieurs dépôts, choix difficile à défaire | `architecte` |
 | écran créé ou modifié de façon visible | `concepteur-ux`, puis `conformite-design-system` |
+| écran chargé, ou allègement demandé | `revue-epure` |
 | schéma, migration, import, index, données réelles | `gestionnaire-donnees` |
 | authentification, droits, entrées externes, requêtes sortantes, secrets, collecte | `revue-securite` |
 | déploiement, gate, tâche planifiée, supervision, sauvegarde, configuration serveur | `devops` |
@@ -58,7 +59,7 @@ L'aiguillage ne retire **jamais** :
 | fonctionnalité transverse | `analyste-metier` → décision → `architecte` → `concepteur-ux` / `gestionnaire-donnees` → `analyste-technique` + plan de `testeur` → réalisation → vérifications → `release` | — |
 | dépendance ou outil mis à jour | `devops` → gate → release corrective | architecte sauf rupture de contrat |
 | incident de production | `diagnostic-incident` (lecture seule) → aiguillage du correctif | toute écriture tant que la cause n'est pas établie |
-| audit demandé | l'agent d'audit concerné (`auditeur-autonomie`, `revue-securite`, `conformite-design-system`) | réalisation (un audit ne corrige pas) |
+| audit demandé | l'agent d'audit concerné (`auditeur-autonomie`, `revue-securite`, `conformite-design-system`, `revue-epure`) | réalisation (un audit ne corrige pas) |
 
 ## Escalade
 

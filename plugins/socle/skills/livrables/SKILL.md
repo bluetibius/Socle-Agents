@@ -21,7 +21,7 @@ l'analyse.
 | Plan | `analyste-technique` | plan technique | [modele-plan-technique.md](modele-plan-technique.md) |
 | Plan | `testeur` | plan de qualification | [modele-plan-qualification.md](modele-plan-qualification.md) |
 | Réalisation | `developpeur`, `devops`, `gestionnaire-donnees`, `testeur` | commits, gate verte | — |
-| Vérification | `gate-runner`, `revue-securite`, `conformite-design-system`, `auditeur-autonomie`, `reviewer-refutation` | rapports de contrôle | — |
+| Vérification | `gate-runner`, `revue-securite`, `conformite-design-system`, `revue-epure`, `auditeur-autonomie`, `reviewer-refutation` | rapports de contrôle | — |
 | Livraison | `release`, `preparateur-prod` | tag, test qualifié, marche à suivre | — |
 | Exploitation | `diagnostic-incident` | rapport d'incident | [modele-rapport-incident.md](modele-rapport-incident.md) |
 | Clôture | `gardien-memoire` | mémoire et roadmap réconciliées | — |

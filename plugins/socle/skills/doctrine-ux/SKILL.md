@@ -1,6 +1,6 @@
 ---
 name: doctrine-ux
-description: Doctrine UX/UI générique — principes et leur ordre, quatre espaces (usage, réglages, administration, exploitation), texte minimal, complexité progressive, une fonction un chemin, navigation, zone compte, pied, icônes, responsive, états, formulaires, retours d'action, anti-patterns. À charger pour concevoir, modifier ou relire une interface, et par l'agent conformite-design-system. Le design system du projet prévaut sur ces règles.
+description: Doctrine UX/UI générique — principes et leur ordre, quatre espaces (usage, réglages, administration, exploitation), texte minimal, complexité progressive, une fonction un chemin, navigation, zone compte, pied, icônes, responsive, états, formulaires, retours d'action, anti-patterns. À charger pour concevoir, modifier ou relire une interface, et par les agents conformite-design-system et revue-epure. Le design system du projet prévaut sur ces règles.
 ---
 
 # Doctrine UX

@@ -1,5 +1,18 @@
 # Historique
 
+## 0.5.0 — 24/10/2026
+
+Développée sous 0.5.0-dev.20261024111150. Aucun nom de skill ni d'agent existant ne change.
+
+### Nouveautés
+
+- Agent `revue-epure` : énonce le but d'un écran en une phrase, passe chaque
+  élément visible au crible de ce but et rend ce qu'on peut retirer,
+  simplifier, replier, déplacer ou fusionner sans perdre de capacité, avec une
+  mesure avant / après. Lecture seule ; complète `conformite-design-system`
+  (qui vérifie les règles) en questionnant même ce qui est conforme.
+- `aiguillage` : signal « écran chargé, ou allègement demandé » → `revue-epure`.
+
 ## 0.4.0 — 22/10/2026
 
 Développée sous 0.4.0-dev.20261022130747.
