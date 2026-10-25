@@ -1,6 +1,6 @@
 ---
 name: doctrine-ux
-description: Doctrine UX/UI générique — principes et leur ordre, quatre espaces (usage, réglages, administration, exploitation), texte minimal, complexité progressive, une fonction un chemin, navigation, zone compte, pied, icônes, responsive, états, formulaires, retours d'action, anti-patterns. À charger pour concevoir, modifier ou relire une interface, et par les agents conformite-design-system et revue-epure. Le design system du projet prévaut sur ces règles.
+description: Doctrine UX/UI générique — principes et leur ordre, quatre espaces (usage, réglages, administration, exploitation), texte minimal, complexité progressive, une fonction un chemin, navigation, zone compte, pied, icônes, responsive, états, formulaires, retours d'action, anti-patterns. À charger pour concevoir, modifier ou relire une interface, et par les agents conformite-design-system, revue-epure et inspecteur-finitions. Le design system du projet prévaut sur ces règles.
 ---
 
 # Doctrine UX
@@ -58,6 +58,10 @@ propre navigation et n'ajoute rien à celle de l'usage.
 - Jamais à l'écran d'usage : nom d'un composant interne comme cause, commande,
   variable d'environnement, chemin de documentation, valeur d'énumération
   brute, jargon d'implémentation (« ingestion »).
+- **Une langue à l'écran** : celle de l'interface. Un nom propre qui a une
+  forme dans cette langue s'affiche sous cette forme seule ; ses autres formes
+  servent la recherche, pas l'affichage. La typographie suit cette langue
+  (espaces, guillemets, apostrophes, majuscules).
 - ✓ Retirer les paragraphes d'un écran d'usage ne retire aucune capacité.
 
 ## 4. Complexité progressive
@@ -122,7 +126,7 @@ saisie ; une validation engageante reste explicite.
   signalement contextuel existe ; pas de capture jointe sur les écrans
   sensibles. L'adresse vient de la configuration, jamais du gabarit.
 
-## 8. Icônes
+## 8. Icônes et logos
 
 - Icône seule seulement pour un sens universel dans le contexte (fermer,
   rechercher, retour, plus d'actions, zoom, copier) ; elle porte un nom
@@ -132,6 +136,9 @@ saisie ; une validation engageante reste explicite.
   état.
 - Un seul jeu, un seul tracé ; une icône à côté d'un libellé est décorative
   (`aria-hidden`). La cible tactile se tient par le bouton.
+- **Logos** : un logo qui porte déjà le nom ne se double pas du nom en texte ;
+  le nom reste son nom accessible. Une série de logos partage hauteur, marge
+  et traitement du fond, et reste lisible dans chaque thème.
 
 ## 9. Responsive et accessibilité
 

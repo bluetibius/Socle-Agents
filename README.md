@@ -67,6 +67,7 @@ lecture seule » de `principes-de-travail`.
 | Vérification | `revue-securite` | revue ciblée d'un changement | non |
 | Vérification | `conformite-design-system` | interface contre DS et `doctrine-ux` | non |
 | Vérification | `revue-epure` | ce qu'un écran peut retirer sans perdre de capacité | non |
+| Vérification | `inspecteur-finitions` | ce qui fait négligé dans une interface livrée | non |
 | Vérification | `auditeur-autonomie` | verdicts d'autonomie et dettes | non |
 | Vérification | `reviewer-refutation` | tente de réfuter un résultat déclaré | non |
 | Livraison | `release` | release décidée, jusqu'au test | oui |

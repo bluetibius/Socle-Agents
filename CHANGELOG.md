@@ -1,5 +1,25 @@
 # Historique
 
+## 0.6.0 — 25/10/2026
+
+Développée sous 0.6.0-dev.20261024191937. Aucun nom de skill ni d'agent existant ne change.
+
+### Nouveautés
+
+- Agent `inspecteur-finitions` : regarde une interface comme la personne qui
+  la reçoit et relève ce qui fait négligé — information dite deux fois, langues
+  mêlées, typographie, séries de logos ou d'images hétérogènes, alignements,
+  textes coupés ou masqués, contenu brut ou factice, thème oublié — avec une
+  gravité (bloquant, visible, finition) et un correctif proposé. Lecture
+  seule ; complète `conformite-design-system` (les règles) et `revue-epure`
+  (l'utile).
+- `doctrine-ux` : une seule langue à l'écran, celle de l'interface, y compris
+  pour les noms propres qui ont une forme dans cette langue ; un logo qui porte
+  déjà le nom ne se double pas du nom en texte ; une série de logos partage
+  hauteur, marge et fond, lisible dans chaque thème.
+- `aiguillage` : signal « travail visible prêt à être déclaré terminé, écran
+  qui fait négligé » → `inspecteur-finitions`.
+
 ## 0.5.0 — 24/10/2026
 
 Développée sous 0.5.0-dev.20261024111150. Aucun nom de skill ni d'agent existant ne change.
