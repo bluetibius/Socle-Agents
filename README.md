@@ -65,6 +65,7 @@ lecture seule » de `principes-de-travail`.
 | Réalisation | `devops` | outillage de livraison et d'exploitation | outillage |
 | Vérification | `gate-runner` | gate et preuve | non |
 | Vérification | `revue-securite` | revue ciblée d'un changement | non |
+| Vérification | `auditeur-securite` | audit de sécurité complet d'un produit | non |
 | Vérification | `conformite-design-system` | interface contre DS et `doctrine-ux` | non |
 | Vérification | `revue-epure` | ce qu'un écran peut retirer sans perdre de capacité | non |
 | Vérification | `inspecteur-finitions` | ce qui fait négligé dans une interface livrée | non |

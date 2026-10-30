@@ -1,6 +1,6 @@
 ---
 name: secrets-securite
-description: Secrets et sécurité au quotidien — ce qui ne sort jamais, portes d'entrée et leurs gardes, SSRF, interfaces locales, journaux caviardés, vie privée (mobile comprise), assouplissement d'un contrôle, sauvegardes. À charger avant d'écrire un rapport, un commit ou un journal qui pourrait contenir un secret ou une donnée personnelle, et avant de toucher à l'authentification, aux droits, aux requêtes sortantes ou à la collecte de données.
+description: Secrets et sécurité au quotidien — ce qui ne sort jamais, portes d'entrée et leurs gardes, SSRF, interfaces locales, journaux caviardés, vie privée (mobile comprise), dépendances, configuration servie, assouplissement d'un contrôle, audits, sauvegardes. À charger avant d'écrire un rapport, un commit ou un journal qui pourrait contenir un secret ou une donnée personnelle, avant de toucher à l'authentification, aux droits, aux requêtes sortantes, à la collecte de données ou aux dépendances, et pour un audit de sécurité.
 ---
 
 # Secrets et sécurité
@@ -88,6 +88,39 @@ route en porte une :
 - Une build de développement qui parle à la production le dit et ne
   téléverse rien de test par accident.
 
+## Dépendances
+
+- Toute dépendance est déclarée avec un fichier de verrouillage versionné ;
+  l'installation de la gate et du déploiement part de ce verrou.
+- Une dépendance ajoutée se justifie : besoin réel, projet maintenu, licence
+  compatible, source officielle. Ce que quelques lignes font ne justifie pas
+  une dépendance.
+- Vulnérabilités connues : l'outil d'audit du gestionnaire de paquets, ou
+  celui que le profil désigne, sur le verrou. Une vulnérabilité ignorée l'est
+  par une exception datée, motivée et révisée, jamais par un seuil relevé.
+- Une copie vendorisée garde sa version et sa source ; elle se met à jour
+  comme une dépendance.
+
+## Configuration servie
+
+Ce que le serveur renvoie fait partie de la sécurité, et se mesure :
+
+- HTTPS seul, redirection depuis HTTP, `Strict-Transport-Security` ;
+- en-têtes : `Content-Security-Policy` stricte, `X-Content-Type-Options:
+  nosniff`, protection contre l'encadrement (`frame-ancestors`),
+  `Referrer-Policy` ;
+- cookies de session `Secure`, `HttpOnly`, `SameSite` ;
+- pages d'erreur sans trace, version de framework, chemin ni requête ;
+- rien de servi hors du dossier public : fichiers d'environnement, dépôt
+  Git, sauvegardes, outils de débogage ou d'administration de base ;
+- seuls les ports nécessaires exposés.
+
+On mesure par des requêtes en lecture (`GET`, `HEAD`), sur l'environnement de
+test. La production se mesure de la même façon seulement si le propriétaire
+le demande, sous `production-gardee`. Jamais de sondage actif (balayage,
+fuzzing, force brute, charge) : il dégrade un environnement partagé et ne
+relève pas d'un agent.
+
 ## Assouplir un contrôle
 
 Tout assouplissement d'un contrôle de sécurité est une **régression** : il
@@ -97,9 +130,15 @@ signale à chaque produit qui l'a reprise.
 
 ## Audits
 
-Les constats en cours vivent dans l'audit de sécurité que le profil désigne.
+Les constats en cours vivent dans l'audit de sécurité que le profil désigne,
+chacun avec un identifiant stable, une sévérité et un critère de fermeture.
 Un chantier qui n'est pas celui de la sécurité ne relance pas d'audit : il
 relaie ce qu'il voit.
+
+Un audit complet part d'un **modèle de menace** court — actifs à protéger,
+qui pourrait les vouloir, par où on entre, ce qui protège chaque entrée — et
+se refait avant une première mise en production, après un changement
+d'architecture ou d'exposition, et à la fréquence que fixe le profil.
 
 ## Sauvegardes
 

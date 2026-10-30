@@ -29,7 +29,8 @@ et rend un plan ; la session l'exécute.
 | écran chargé, ou allègement demandé | `revue-epure` |
 | travail visible prêt à être déclaré terminé, écran qui fait négligé | `inspecteur-finitions` |
 | schéma, migration, import, index, données réelles | `gestionnaire-donnees` |
-| authentification, droits, entrées externes, requêtes sortantes, secrets, collecte | `revue-securite` |
+| authentification, droits, entrées externes, requêtes sortantes, secrets, collecte, dépendance ajoutée | `revue-securite` |
+| première mise en production, changement d'architecture ou d'exposition, échéance d'audit du profil | `auditeur-securite` |
 | déploiement, gate, tâche planifiée, supervision, sauvegarde, configuration serveur | `devops` |
 | plus de quelques fichiers, ou ordre d'implémentation non évident | `analyste-technique` |
 | comportement observable modifié | `testeur` (au minimum : un test de régression) |
@@ -60,7 +61,7 @@ L'aiguillage ne retire **jamais** :
 | fonctionnalité transverse | `analyste-metier` → décision → `architecte` → `concepteur-ux` / `gestionnaire-donnees` → `analyste-technique` + plan de `testeur` → réalisation → vérifications → `release` | — |
 | dépendance ou outil mis à jour | `devops` → gate → release corrective | architecte sauf rupture de contrat |
 | incident de production | `diagnostic-incident` (lecture seule) → aiguillage du correctif | toute écriture tant que la cause n'est pas établie |
-| audit demandé | l'agent d'audit concerné (`auditeur-autonomie`, `revue-securite`, `conformite-design-system`, `revue-epure`, `inspecteur-finitions`) | réalisation (un audit ne corrige pas) |
+| audit demandé | l'agent d'audit concerné (`auditeur-autonomie`, `auditeur-securite`, `revue-securite`, `conformite-design-system`, `revue-epure`, `inspecteur-finitions`) | réalisation (un audit ne corrige pas) |
 
 ## Escalade
 

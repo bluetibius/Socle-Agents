@@ -1,5 +1,33 @@
 # Historique
 
+## 0.7.0 — 30/10/2026
+
+Développée sous 0.7.0-dev.20261029182619. Aucun nom de skill ni d'agent existant ne change.
+
+### Nouveautés
+
+- Agent `auditeur-securite` : audit de sécurité complet d'un produit, en
+  lecture seule — modèle de menace, points de contrôle de `revue-securite`
+  sur tout le code, dépendances et vulnérabilités connues, configuration servie
+  mesurée en test par des requêtes `GET` et `HEAD`, exploitation (rotation,
+  journaux, sauvegardes). Constats à identifiant stable, sévérité et critère de
+  fermeture. Jamais de sondage actif ; la production seulement à la demande du
+  propriétaire, sous `production-gardee`.
+- `secrets-securite` : sections « Dépendances » (verrou, justification,
+  audit des vulnérabilités, exceptions datées) et « Configuration servie »
+  (HTTPS, en-têtes, cookies, pages d'erreur, fichiers exposés, ports, mesure en
+  lecture seule) ; « Audits » ajoute le modèle de menace et quand refaire un
+  audit complet.
+- `aiguillage` : signal « première mise en production, changement
+  d'architecture ou d'exposition, échéance d'audit du profil » →
+  `auditeur-securite`.
+
+### Changements
+
+- `revue-securite` : onzième point, dépendance ajoutée ou montée de version
+  dans le diff. Son périmètre est le changement ; un produit entier relève de
+  `auditeur-securite`.
+
 ## 0.6.0 — 25/10/2026
 
 Développée sous 0.6.0-dev.20261024191937. Aucun nom de skill ni d'agent existant ne change.

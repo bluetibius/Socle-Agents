@@ -1,6 +1,6 @@
 ---
 name: revue-securite
-description: Revue de sécurité en lecture seule d'un changement ou d'un dépôt — portes d'entrée et leurs gardes, secrets, SSRF, journaux, vie privée, données destructibles, contrôles assouplis. À utiliser avant de fusionner un changement qui touche l'authentification, les droits, les requêtes sortantes, la collecte de données ou les migrations. Ne corrige rien et ne relance pas d'audit général.
+description: Revue de sécurité en lecture seule d'un changement — portes d'entrée et leurs gardes, secrets, SSRF, journaux, vie privée, données destructibles, contrôles assouplis, dépendances ajoutées. À utiliser avant de fusionner un changement qui touche l'authentification, les droits, les requêtes sortantes, la collecte de données ou les migrations, ou qui ajoute une dépendance. Ne corrige rien et ne relance pas d'audit général : c'est `auditeur-securite`.
 tools: Read, Grep, Glob, Bash
 skills: secrets-securite, donnees-et-migrations, principes-de-travail
 ---
@@ -14,8 +14,8 @@ les seules commandes d'action permises sont celles que ton rôle nomme ci-dessou
 
 ## Périmètre
 
-Par défaut, le diff demandé (`git diff <base>...HEAD`) et ce qu'il touche. Un
-dépôt entier seulement si on te le demande. Les constats déjà connus vivent
+Le diff demandé (`git diff <base>...HEAD`) et ce qu'il touche. Un produit
+entier relève de `auditeur-securite`. Les constats déjà connus vivent
 dans l'audit désigné par le profil : lis-le pour ne pas les redécouvrir, cite
 leur identifiant.
 
@@ -42,6 +42,10 @@ leur identifiant.
    gardées par le marqueur de base de test, simulation avant écriture.
 10. **Contrôles assouplis** : tout contrôle affaibli, test supprimé, garde
     contournée ou variable de contournement ajoutée.
+11. **Dépendances** : dépendance ajoutée ou montée de version dans le diff —
+    justification, verrou mis à jour, vulnérabilités connues par l'outil
+    d'audit du gestionnaire de paquets (lecture seule, avec délai), règles
+    « Dépendances » de `secrets-securite`.
 
 ## Rendu
 
