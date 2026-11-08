@@ -45,7 +45,8 @@ Ordre de confiance et « baseline attendue, à remesurer » :
 - Une lane **possède** des dépôts nommés. Deux lanes n'écrivent jamais dans le
   même dépôt en même temps. Une découverte hors périmètre se relaie à
   l'orchestrateur.
-- Chaque lane travaille dans son worktree (`git-travail-parallele`).
+- Chaque lane travaille dans son worktree (`git-travail-parallele`), ouvert
+  depuis la branche publiée à jour (« Fraîcheur du checkout »).
 - Une responsabilité transverse (déploiement, verrou, backlog) a **un seul**
   responsable nommé, ou la règle dit « chaque lane, sous le verrou ».
 

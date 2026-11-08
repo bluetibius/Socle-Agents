@@ -26,7 +26,7 @@ déclare comme écart, avec sa condition de retrait.
 | Skill | Pour |
 |---|---|
 | `principes-de-travail` | autorité, ordre de confiance, profil, écarts |
-| `git-travail-parallele` | plusieurs agents sur les mêmes dépôts |
+| `git-travail-parallele` | plusieurs agents sur les mêmes dépôts ; fraîcheur du checkout |
 | `verification-et-terminaison` | « terminé », gates, preuves |
 | `versionnement-release` | SemVer, numéro de développement, release |
 | `production-gardee` | ce qu'un agent prépare et où il s'arrête |

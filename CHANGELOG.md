@@ -1,5 +1,28 @@
 # Historique
 
+## 0.8.0 — 08/11/2026
+
+Développée sous 0.8.0-dev.20261108120410. Aucun nom de skill ni d'agent existant ne change.
+
+### Nouveautés
+
+- `git-travail-parallele` : section « Fraîcheur du checkout ». Avant tout
+  travail, y compris un audit, une revue ou un diagnostic qui cite du code :
+  `git fetch --tags`, mesure du retard et de l'avance sur la branche suivie et
+  la branche publiée, fast-forward seulement d'une copie principale propre,
+  worktree depuis la branche publiée à jour pour une copie sale ou d'un autre
+  chantier, commit ou tag lu nommé dans tout rapport (« fraîcheur non vérifiée »
+  sans accès distant), constat tiré d'une copie non mesurée « non revérifié ».
+
+### Changements
+
+- `principes-de-travail` (« Mesurer avant d'écrire ») et `mission-multi-agents`
+  (lanes) renvoient à cette section ; les agents `auditeur-securite`,
+  `revue-securite`, `reviewer-refutation` et `diagnostic-incident` la chargent
+  et nomment le commit lu.
+
+Rang mineur : une règle de comportement s'ajoute, sans rien retirer ni renommer.
+
 ## 0.7.0 — 30/10/2026
 
 Développée sous 0.7.0-dev.20261029182619. Aucun nom de skill ni d'agent existant ne change.

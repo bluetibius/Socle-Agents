@@ -69,7 +69,9 @@ observé ».
 ## Mesurer avant d'écrire
 
 Lire l'état (Git, fichiers, environnement) avant de modifier. Relire juste
-avant d'écrire un fichier partagé : un autre agent a pu le changer.
+avant d'écrire un fichier partagé : un autre agent a pu le changer. Une copie
+locale peut être en retard sur la branche publiée : sa fraîcheur se mesure
+avant de s'y fier (`git-travail-parallele`, « Fraîcheur du checkout »).
 
 ## Écarts
 

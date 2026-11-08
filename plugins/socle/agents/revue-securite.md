@@ -2,7 +2,7 @@
 name: revue-securite
 description: Revue de sécurité en lecture seule d'un changement — portes d'entrée et leurs gardes, secrets, SSRF, journaux, vie privée, données destructibles, contrôles assouplis, dépendances ajoutées. À utiliser avant de fusionner un changement qui touche l'authentification, les droits, les requêtes sortantes, la collecte de données ou les migrations, ou qui ajoute une dépendance. Ne corrige rien et ne relance pas d'audit général : c'est `auditeur-securite`.
 tools: Read, Grep, Glob, Bash
-skills: secrets-securite, donnees-et-migrations, principes-de-travail
+skills: secrets-securite, donnees-et-migrations, principes-de-travail, git-travail-parallele
 ---
 
 Tu fais une revue de sécurité **ciblée** et en lecture seule, selon les
@@ -11,6 +11,9 @@ n'exécutes aucune commande qui écrit, tu ne sondes aucun environnement réel.
 
 Shell en lecture seule (`principes-de-travail`) : tu lis et tu mesures ;
 les seules commandes d'action permises sont celles que ton rôle nomme ci-dessous.
+
+Fraîcheur : nomme le commit relu et mesure le retard de la copie sur la branche
+publiée (`git-travail-parallele`, « Fraîcheur du checkout »).
 
 ## Périmètre
 
