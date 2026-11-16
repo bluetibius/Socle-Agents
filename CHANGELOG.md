@@ -1,5 +1,20 @@
 # Historique
 
+## 0.8.1 — 16/11/2026
+
+Aucun nom de skill ni d'agent existant ne change.
+
+### Changements
+
+- `git-travail-parallele` (« Un chantier, un worktree ») : l'emplacement d'un
+  worktree est celui que désigne le profil ; `../<depot>-<sujet>` reste le
+  défaut. Un worktree placé ailleurs doit encore résoudre les dépôts voisins
+  que ses chemins relatifs supposent. Un worktree existant ne se déplace
+  qu'avec `git worktree move`, par son chantier.
+
+Rang correctif : le comportement par défaut ne change pas ; le profil peut
+désigner un autre emplacement.
+
 ## 0.8.0 — 08/11/2026
 
 Développée sous 0.8.0-dev.20261108120410. Aucun nom de skill ni d'agent existant ne change.

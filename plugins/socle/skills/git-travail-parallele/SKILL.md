@@ -44,9 +44,15 @@ code** :
 ## Un chantier, un worktree
 
 ```
-git worktree add ../<depot>-<sujet> -b chantier/<sujet> main
+git worktree add <emplacement> -b chantier/<sujet> main
 ```
 
+- Emplacement : celui que désigne le profil (par exemple un dossier dédié aux
+  worktrees, rangé par dépôt) ; sans indication, `../<depot>-<sujet>`, à côté
+  de la copie principale. Un worktree placé ailleurs doit encore trouver les
+  dépôts voisins que ses chemins relatifs supposent ; le profil dit comment.
+- Un worktree existant ne se déplace qu'avec `git worktree move`, jamais par un
+  simple déplacement de dossier, et seulement par son chantier.
 - Dépendances installées (`vendor/`, `node_modules/`…) : les **copier** dans le
   worktree (`cp -cR` sur APFS), jamais un lien symbolique — l'autoload suivrait
   le lien vers l'autre copie.
